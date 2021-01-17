@@ -1,19 +1,15 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
 import { CreateComponent } from "./create/create.component";
 import { EditComponent } from "./edit/edit.component";
+import { EditorRoutingModule } from "./editor-routing.module";
 
 @NgModule({
-  exports: [
-    CreateComponent,
-    EditComponent
-  ],
   declarations: [
     CreateComponent,
     EditComponent
   ],
   imports: [
-    RouterModule
+    EditorRoutingModule
   ]
 })
 export class EditorModule {}

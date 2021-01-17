@@ -1,24 +1,17 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { ArticleModule } from "../article/article.module";
-import { SettingsComponent } from "./settings/settings.component";
+import { SharedModule } from "../shared/shared.module";
+import { ProfileRoutingModule } from "./profile-routing.module";
 import { UserFavouritesComponent } from "./user-favourites/user-favourites.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
 
 @NgModule({
   declarations: [
-    SettingsComponent,
-    UserProfileComponent,
-    UserFavouritesComponent
-  ],
-  exports: [
-    SettingsComponent,
     UserProfileComponent,
     UserFavouritesComponent
   ],
   imports: [
-    RouterModule,
-    ArticleModule
+    ProfileRoutingModule,
+    SharedModule
   ]
 })
 export class ProfileModule {}

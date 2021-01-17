@@ -1,19 +1,13 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
 import { ArticlePageComponent } from "./article-page/article-page.component";
-import { ArticlePreviewComponent } from "./article-preview/article-preview.component";
+import { ArticleRoutingModule } from "./article-routing.module";
 
 @NgModule({
   declarations: [
-    ArticlePageComponent,
-    ArticlePreviewComponent
-  ],
-  exports: [
-    ArticlePageComponent,
-    ArticlePreviewComponent
+    ArticlePageComponent
   ],
   imports: [
-    RouterModule
+    ArticleRoutingModule
   ]
 })
 export class ArticleModule {}
