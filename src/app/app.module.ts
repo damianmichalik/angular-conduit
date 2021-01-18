@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
-import { ArticleModule } from './article/article.module';
 import { AuthModule } from './auth/auth.module';
-import { AuthRoutingModule } from './auth/auth-routing.module';
+import { CommonModule } from '@angular/common';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,14 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
+    HttpClientModule,
+    CoreModule,
     SharedModule,
     HomeModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
